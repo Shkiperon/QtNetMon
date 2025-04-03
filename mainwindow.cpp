@@ -68,7 +68,7 @@ void MainWindow::pingByTimer()
 void MainWindow::slotAddGroupItem(QString nameForBtn, int numOfNodes)
 {
     QListWidgetItem *item = new QListWidgetItem;
-    item->setText(nameForBtn.replace(QRegExp("(\\|).*"),""));
+    item->setText(nameForBtn.replace(QRegularExpression("(\\|).*"),""));
     item->setToolTip("0/"+QString::number(numOfNodes));
     item->setBackground(Qt::red);
     ui->listWidget->addItem(item);
@@ -248,5 +248,5 @@ void MainWindow::openConfFile()
 
 void MainWindow::aboutMyProgram()
 {
-    QMessageBox::information(this,"О программе","<p align='center'>Версия 1.0<br>Автор: Артем Друзь (aka Shkiperon)<br><br>Идея программы позаимствована у Дмитрия Бачило (aka Bocha)</p>");
+    QMessageBox::information(this,"О программе","<p align='center'>Версия 1.1<br>Автор: Артем Друзь (aka Shkiperon)<br><br>Идея программы позаимствована у Дмитрия Бачило (aka Bocha)</p>");
 }
