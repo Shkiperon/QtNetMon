@@ -8,6 +8,7 @@
 #include <QLabel>
 #include <QListView>
 #include <QProcess>
+#include <QRegularExpression>
 #include <QSettings>
 #include <QFile>
 #include <QFileDialog>
